@@ -1,5 +1,5 @@
 GET http://localhost:5000/user 
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJVc2VybmFtZSI6ImFubmFudGEiLCJ1c2VyRW1haWwiOiJhbm5hbnRhQGdtYWlsLmNvbSIsImlhdCI6MTcyMjQ0OTU2MSwiZXhwIjoxNzIyNDUzMTYxfQ.e-7M8k5M4Ojpw2bkucFQPAQkgHIyUle2fl6nk7GfgDw
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJVc2VybmFtZSI6ImFubmFudGEiLCJ1c2VyRW1haWwiOiJhbm5hbnRhQGdtYWlsLmNvbSIsImlhdCI6MTcyMjUyNDQxMiwiZXhwIjoxNzIyNTI4MDEyfQ.C7PSrpvw5aF_VbQOPnO6bzYzOHz2RTEKzgFUsADsorQ
 ###
 POST  http://localhost:5000/user
 Content-Type: application/json
@@ -22,4 +22,47 @@ Content-Type: application/json
 ###
 
 DELETE  http://localhost:5000/logout
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJVc2VybmFtZSI6ImFubmFudGEiLCJ1c2VyRW1haWwiOiJhbm5hbnRhQGdtYWlsLmNvbSIsImlhdCI6MTcyMjQ0OTU2MSwiZXhwIjoxNzIyNDUzMTYxfQ.e-7M8k5M4Ojpw2bkucFQPAQkgHIyUle2fl6nk7GfgDw
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJVc2VybmFtZSI6ImFubmFudGEiLCJ1c2VyRW1haWwiOiJhbm5hbnRhQGdtYWlsLmNvbSIsImlhdCI6MTcyMjUzMDAwMCwiZXhwIjoxNzIyNTMzNjAwfQ.uPahxkK4FtqVxPi9KUnMDJA4XEWnfisLpVzQV7FGyTg
+
+
+###
+
+GET  http://localhost:5000/task
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJVc2VybmFtZSI6InJpemt5IiwidXNlckVtYWlsIjoicml6a3lAZ21haWwuY29tIiwiaWF0IjoxNzIyNTI4MTEwLCJleHAiOjE3MjI1MzE3MTB9.dktDWGUm7f_3Oe3HCmESDWyyE8mZeCcGOktKfdew034
+
+
+###
+POST  http://localhost:5000/task
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJVc2VybmFtZSI6InJpemt5IiwidXNlckVtYWlsIjoicml6a3lAZ21haWwuY29tIiwiaWF0IjoxNzIyNTI4MTEwLCJleHAiOjE3MjI1MzE3MTB9.dktDWGUm7f_3Oe3HCmESDWyyE8mZeCcGOktKfdew034
+Content-Type: application/json
+
+{
+    "title":"ipa",
+    "description":"MIPa",
+    "status":"Todo"
+}
+
+###
+GET http://localhost:5000/alltask
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJVc2VybmFtZSI6ImFubmFudGEiLCJ1c2VyRW1haWwiOiJhbm5hbnRhQGdtYWlsLmNvbSIsImlhdCI6MTcyMjUzMDAwMCwiZXhwIjoxNzIyNTMzNjAwfQ.uPahxkK4FtqVxPi9KUnMDJA4XEWnfisLpVzQV7FGyTg
+
+
+###
+PUT   http://localhost:5000/task/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJVc2VybmFtZSI6ImFubmFudGEiLCJ1c2VyRW1haWwiOiJhbm5hbnRhQGdtYWlsLmNvbSIsImlhdCI6MTcyMjUzMDAwMCwiZXhwIjoxNzIyNTMzNjAwfQ.uPahxkK4FtqVxPi9KUnMDJA4XEWnfisLpVzQV7FGyTg
+Content-Type: application/json
+
+{
+    "title":"task1",
+    "description":"task1",
+    "status":"onprogress"
+}
+
+###
+GET http://localhost:5000/task/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJVc2VybmFtZSI6InJpemt5IiwidXNlckVtYWlsIjoicml6a3lAZ21haWwuY29tIiwiaWF0IjoxNzIyNTI4MTEwLCJleHAiOjE3MjI1MzE3MTB9.dktDWGUm7f_3Oe3HCmESDWyyE8mZeCcGOktKfdew034
+
+
+###
+DELETE  http://localhost:5000/task/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJVc2VybmFtZSI6ImFubmFudGEiLCJ1c2VyRW1haWwiOiJhbm5hbnRhQGdtYWlsLmNvbSIsImlhdCI6MTcyMjUzMDAwMCwiZXhwIjoxNzIyNTMzNjAwfQ.uPahxkK4FtqVxPi9KUnMDJA4XEWnfisLpVzQV7FGyTg
